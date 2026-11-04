@@ -1,6 +1,6 @@
 # 上架 / 体验版准备（默契测试）
 
-> 状态：脚手架就绪，**不提审、不合 main**。正式 AppID / 类目终选 / 合法域名 / 隐私协议 URL 仍缺，勿假设。
+> 状态：脚手架就绪，**不提审、不合 main**。正式 AppID 已填入工程：`wx286d819e3a75a231`。类目终选 / 合法域名 / 隐私协议 URL 仍缺；**体验版仍等这些就绪后再上传**，勿假设已可上体验版。
 
 ## 1. 主体与账号（用户拍板）
 
@@ -8,15 +8,14 @@
 - **不是**用户本人的未成年账号。
 - 名称倾向：**默契测试**（可先占用；重名则加后缀，需问用户）。
 
-## 2. AppID 怎么填
+## 2. AppID（已填入）
 
-1. 用户在 [微信公众平台](https://mp.weixin.qq.com/) 用上述个人主体完成注册，拿到 AppID。
-2. 本地两处替换占位 `touristappid`：
-   - `project.config.json` → `appid`
-   - （可选）本地 `project.private.config.json`（已在 `.gitignore`，勿提交密钥类信息）
-3. 无 AppID 时：开发者工具选「测试号 / 游客」或保持 `touristappid`，可预览主路径；**无法上传体验版**。
+正式 AppID **`wx286d819e3a75a231`** 已写入：
 
-拿到正式 AppID 后：通过大宰相回报 **Bot小网 + Bot业**，再谈上传体验版。
+- `project.config.json` → `appid`（已提交到工程）
+- 本地 `project.private.config.json`（可选覆盖；已在 `.gitignore`，勿提交密钥类信息）
+
+体验版仍须类目终选、request 合法域名、隐私协议托管 URL 就绪后再上传；**本阶段不提审、不合 main**。进度通过大宰相回报 **Bot小网 + Bot业**。
 
 ## 3. 个人主体类目建议（工具化，过审更稳）
 
@@ -40,10 +39,10 @@
 - Markdown 副本：`docs/privacy.md`、`docs/terms.md`
 - **正式托管 URL 等用户拍板**（可 GitHub Pages 子路径或其它静态页）。未就绪前不要填公众平台「隐私政策链接」瞎编域名。
 
-## 5. 体验版上传步骤（有 AppID 后）
+## 5. 体验版上传步骤（AppID 已有；仍等类目/域名/隐私 URL）
 
 1. 打开微信开发者工具 → 导入本项目目录 `/workspace/zhiji-miniprogram/`（或克隆后的同路径）。
-2. 填入正式 AppID；详情 → 本地设置：开发期可关「域名校验」，上传前打开并确认已配 request 域名。
+2. 工程已含正式 AppID `wx286d819e3a75a231`；详情 → 本地设置：开发期可关「域名校验」，上传前打开并确认已配 request 域名。
 3. 公众平台 → 开发管理 → 开发设置 → 服务器域名：添加 `https://zhiji-board.wanghowlonggg.workers.dev`。
 4. 开发者工具 → 上传 → 填写版本号与备注（如 `mvp-0.1.0`）。
 5. 公众平台 → 管理 → 版本管理 → 选开发版 → **选为体验版** → 加体验者微信号。
@@ -52,7 +51,7 @@
 ## 6. 用云电脑开发者工具打开
 
 - AppImage：`/workspace/wechat-devtools/WeChat_Dev_Tools.AppImage`
-- 若已登录：导入项目 → 目录选本工程 → AppID 用 tourist / 正式。
+- 若已登录：导入项目 → 目录选本工程 → AppID 用正式 `wx286d819e3a75a231`（工程已填）。
 - 遇登录墙：用户手机扫码；不要阻塞工程开发。CLI 社区移植版能力因环境而异，以 GUI 导入为准。
 
 手动命令示例（若 AppImage 支持）：

@@ -1,12 +1,12 @@
 # 默契测试 · 微信小程序 MVP
 
 独立工程（本仓库），**不**放入 GitHub Pages 主仓根目录。  
-AppID 占位：`touristappid`。分支：`feat/miniprogram-mvp`（只开 PR，**不提审、不合 main**）。
+正式 AppID 已填入工程：`wx286d819e3a75a231`（见 `project.config.json`）。分支：`feat/miniprogram-mvp`（只开 PR，**不提审、不合 main**）。体验版仍等类目 / 合法域名 / 隐私协议 URL。
 
 ## 打开方式
 
 1. 微信开发者工具 → 导入项目 → 选择本目录。
-2. AppID：测试号 / `touristappid`；有正式 ID 后再替换（见 `docs/launch.md`）。
+2. AppID：工程已填正式 ID `wx286d819e3a75a231`（见 `docs/launch.md`）；体验版仍等类目 / 域名 / 隐私 URL。
 3. 云电脑 AppImage：`/workspace/wechat-devtools/WeChat_Dev_Tools.AppImage`（遇登录墙请用户扫码）。
 
 ## 主路径

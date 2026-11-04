@@ -1,5 +1,5 @@
 {
-  "description": "默契测试 · 微信小程序 MVP（tourist / 占位 AppID）",
+  "description": "默契测试 · 微信小程序 MVP",
   "packOptions": {
     "ignore": [
       { "type": "folder", "value": "docs" },
@@ -45,7 +45,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "3.5.5",
-  "appid": "touristappid",
+  "appid": "wx286d819e3a75a231",
   "projectname": "默契测试",
   "condition": {},
   "editorSetting": {
