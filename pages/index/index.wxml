@@ -1,0 +1,26 @@
+<view class="wrap">
+  <view class="card">
+    <view class="pill">10 题 · 约 1 分钟 · 免费自测工具</view>
+    <view class="h1">他到底有多懂你？</view>
+    <view class="sub">出一组题，发给熟人作答，像投票一样看默契结果。不做公开广场、不推陌生人。</view>
+    <view class="demo card" style="margin:0;background:var(--primary-soft);box-shadow:none;">
+      <view class="hint">示例</view>
+      <view>小林 × 阿杰　默契 85% / 答对 8/10</view>
+    </view>
+    <button class="btn btn-primary" bindtap="onStart">开始出题</button>
+    <button class="btn btn-secondary" wx:if="{{hasPublished}}" bindtap="onManage">我的试卷</button>
+  </view>
+
+  <view class="card">
+    <view class="h2">快速模板（工具预设）</view>
+    <view class="row">
+      <view class="chip" wx:for="{{templates}}" wx:key="id" data-id="{{item.id}}" bindtap="onTemplate">{{item.emoji}} {{item.name}}</view>
+    </view>
+    <view class="hint" style="margin-top:12rpx;">模板仅预填题目，答案由你选定后生成专属问卷。</view>
+  </view>
+
+  <view class="footer-links">
+    <navigator url="/pages/privacy/privacy">隐私政策</navigator>·
+    <navigator url="/pages/terms/terms">用户协议</navigator>
+  </view>
+</view>

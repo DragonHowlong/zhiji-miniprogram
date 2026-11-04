@@ -1,0 +1,25 @@
+<view class="wrap">
+  <view class="card">
+    <view class="h2">问卷信息</view>
+    <input class="field" placeholder="你的昵称（出题人）" value="{{name}}" bindinput="onName" maxlength="12" />
+    <input class="field" placeholder="问卷标题（可选）" value="{{title}}" bindinput="onTitle" maxlength="30" />
+  </view>
+
+  <view class="card">
+    <view class="h2">达标奖励（可选，本地约定）</view>
+    <view class="hint">仅作熟人之间的趣味约定，不涉及真实支付/交易。</view>
+    <view class="row" style="margin-top:12rpx;">
+      <view class="chip {{reward===item?'on':''}}" wx:for="{{rewards}}" wx:key="*this" data-v="{{item}}" bindtap="onReward">{{item}}</view>
+    </view>
+    <input class="field" placeholder="或自定义奖励文案" value="{{rewardCustom}}" bindinput="onRewardCustom" maxlength="20" />
+  </view>
+
+  <view class="card">
+    <view class="h2">通关门槛</view>
+    <view class="row">
+      <view class="chip {{threshold===item?'on':''}}" wx:for="{{thresh}}" wx:key="*this" data-v="{{item}}" bindtap="onThresh">≥ {{item}} 题</view>
+    </view>
+  </view>
+
+  <button class="btn btn-primary" bindtap="onPublish" loading="{{publishing}}">生成问卷</button>
+</view>

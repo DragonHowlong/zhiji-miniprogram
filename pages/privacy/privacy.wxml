@@ -1,0 +1,11 @@
+<view class="wrap">
+  <view class="card">
+    <view class="h1">隐私政策（占位）</view>
+    <view class="hint">正式 URL / 法务终稿待用户拍板。以下为上架用占位说明，不构成最终法律文本。</view>
+    <view class="sub" style="margin-top:16rpx;">
+      「默契测试」是一款自测/投票式问卷工具。我们仅在设备本地保存你编辑的问卷、作答昵称与必要标识；将成绩提交到 Cloudflare Worker 排行榜服务时，会上传昵称、分数与匿名设备指纹。分享链路不包含出题人口令。不向陌生人推荐内容，不做公开社交广场。
+    </view>
+    <view class="sub">运营主体：由监护人/亲友（已满 18 周岁）注册的微信小程序个人主体账号承载；非未成年人本人账号。</view>
+    <view class="sub">联系方式占位：待运营者填写。</view>
+  </view>
+</view>

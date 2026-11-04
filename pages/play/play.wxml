@@ -1,0 +1,37 @@
+<!-- intro -->
+<view class="wrap" wx:if="{{phase==='intro' && quiz}}">
+  <view class="card">
+    <view class="pill">投票式作答 · 10 题</view>
+    <view class="h1">{{quiz.title}}</view>
+    <view class="sub">出题人：{{quiz.name || '神秘人'}} · 猜 TA 会怎么选</view>
+    <view class="hint" wx:if="{{sharedBanner}}">{{sharedBanner}}</view>
+    <input class="field" placeholder="你的昵称（显示在结果榜）" value="{{nick}}" bindinput="onNick" maxlength="12" />
+    <button class="btn btn-primary" bindtap="onBegin">开始作答</button>
+  </view>
+</view>
+
+<!-- answering -->
+<view class="wrap" wx:elif="{{phase==='play' && quiz}}">
+  <view class="hint">第 {{idx+1}} / 10 题 · 猜 {{quiz.name || 'TA'}} 的选择</view>
+  <view class="progress"><view style="width:{{progress}}%;"></view></view>
+  <view class="card">
+    <view class="h2">{{question.q}}</view>
+    <view
+      class="opt {{picked===index?'selected':''}}"
+      wx:for="{{question.options}}"
+      wx:key="*this"
+      data-i="{{index}}"
+      bindtap="onPick"
+    >
+      <view class="letter">{{letters[index]}}</view>
+      <text>{{item}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="wrap" wx:else>
+  <view class="card">
+    <view class="hint">问卷无效或分享参数缺失。可让好友重新转发，或自己去出题。</view>
+    <button class="btn btn-primary" bindtap="goHome">回到首页</button>
+  </view>
+</view>

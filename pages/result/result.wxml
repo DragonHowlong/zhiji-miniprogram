@@ -1,0 +1,29 @@
+<view class="wrap" wx:if="{{result && quiz}}">
+  <view class="card" style="text-align:center;">
+    <view class="hint">默契度</view>
+    <view class="score-num">{{result.pct}}%</view>
+    <view class="sub">答对 {{result.score}} / 10　{{result.won ? '已达标' : '未达标'}}</view>
+    <view>{{result.band.text}}</view>
+    <view class="hint" wx:if="{{quiz.reward}}">奖励约定：{{quiz.reward}}</view>
+  </view>
+
+  <view class="card">
+    <view class="h2">结果榜</view>
+    <view class="hint" wx:if="{{boardHint}}">{{boardHint}}</view>
+    <view class="lb-row" wx:for="{{board}}" wx:key="at">
+      <text>{{item.nick || '匿名'}}</text>
+      <text class="lb-score">{{item.score}}/10</text>
+    </view>
+    <view class="hint" wx:if="{{!board.length}}">暂无榜数据</view>
+  </view>
+
+  <button class="btn btn-primary" bindtap="onCreateOwn">换我出题，看你多懂我</button>
+  <button class="btn btn-secondary" bindtap="onRetry">再答一次</button>
+  <button class="btn btn-secondary" open-type="share">分享结果</button>
+</view>
+<view class="wrap" wx:else>
+  <view class="card">
+    <view class="hint">没有结果，请先作答。</view>
+    <button class="btn btn-primary" bindtap="goHome">回首页</button>
+  </view>
+</view>

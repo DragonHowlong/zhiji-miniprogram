@@ -1,0 +1,10 @@
+<view class="wrap">
+  <view class="card">
+    <view class="h1">用户协议（占位）</view>
+    <view class="hint">正式 URL / 法务终稿待用户拍板。</view>
+    <view class="sub" style="margin-top:16rpx;">
+      你理解并同意：本工具用于熟人之间的趣味问卷与结果比对；奖励文案仅为本地约定，不涉及真实交易或现金兑付。请勿发布违法违规、侵权或骚扰内容。我们可不经存储完整问卷正文（题目主要经分享参数传递），排行榜仅保留首次成绩。
+    </view>
+    <view class="sub">未成年人请在监护人指导下使用；本小程序由已满 18 周岁的监护人/亲友个人主体注册与运营。</view>
+  </view>
+</view>
