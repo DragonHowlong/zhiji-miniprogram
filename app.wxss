@@ -1,0 +1,101 @@
+/** Global — tool-like, soft blue. Brand polish: 需问 Bot小艺 */
+page {
+  --primary: #6BA3E8;
+  --primary-dark: #4A86D4;
+  --primary-soft: rgba(107, 163, 232, 0.14);
+  --bg: #F5F8FC;
+  --card: #ffffff;
+  --text: #1f2a37;
+  --text-light: #6b7280;
+  --border: #e5eaf2;
+  --green: #22a06b;
+  --danger: #d14343;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 28rpx;
+  line-height: 1.55;
+  box-sizing: border-box;
+}
+.wrap { padding: 28rpx 28rpx 48rpx; }
+.card {
+  background: var(--card);
+  border-radius: 24rpx;
+  padding: 28rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 8rpx 28rpx rgba(31, 42, 55, 0.05);
+}
+.h1 { font-size: 40rpx; font-weight: 720; margin: 0 0 8rpx; }
+.h2 { font-size: 32rpx; font-weight: 680; margin: 0 0 16rpx; }
+.sub { color: var(--text-light); font-size: 24rpx; margin-bottom: 24rpx; }
+.pill {
+  display: inline-block;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  border-radius: 999rpx;
+  padding: 8rpx 18rpx;
+  font-size: 22rpx;
+  font-weight: 620;
+  margin-bottom: 20rpx;
+}
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 999rpx;
+  padding: 22rpx 24rpx;
+  font-size: 30rpx;
+  font-weight: 680;
+  margin-top: 16rpx;
+  box-sizing: border-box;
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-secondary {
+  background: #fff;
+  color: var(--primary-dark);
+  border: 2rpx solid var(--primary);
+}
+.btn-ghost { background: transparent; color: var(--text-light); }
+.hint { color: var(--text-light); font-size: 24rpx; }
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  border: 2rpx solid var(--border);
+  border-radius: 18rpx;
+  padding: 22rpx 20rpx;
+  margin-bottom: 14rpx;
+  background: #fff;
+}
+.opt.selected { border-color: var(--primary); background: var(--primary-soft); }
+.opt.correct { border-color: var(--green); }
+.letter {
+  width: 44rpx; height: 44rpx; border-radius: 50%;
+  background: var(--primary-soft); color: var(--primary-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 22rpx; flex-shrink: 0;
+}
+.field {
+  width: 100%;
+  border: 2rpx solid var(--border);
+  border-radius: 16rpx;
+  padding: 18rpx 20rpx;
+  margin-bottom: 16rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.row { display: flex; gap: 12rpx; flex-wrap: wrap; }
+.chip {
+  padding: 10rpx 20rpx;
+  border-radius: 999rpx;
+  border: 2rpx solid var(--border);
+  font-size: 24rpx;
+  background: #fff;
+}
+.chip.on { border-color: var(--primary); background: var(--primary-soft); color: var(--primary-dark); font-weight: 650; }
+.score-num { font-size: 96rpx; font-weight: 780; color: var(--primary); text-align: center; line-height: 1; }
+.lb-row { display: flex; justify-content: space-between; padding: 14rpx 0; border-bottom: 1rpx solid var(--border); }
+.lb-score { color: var(--primary-dark); font-weight: 650; }
+.progress { height: 10rpx; background: var(--border); border-radius: 999rpx; overflow: hidden; margin: 12rpx 0 20rpx; }
+.progress > view { height: 100%; background: var(--primary); }
+.footer-links { text-align: center; margin-top: 32rpx; color: var(--text-light); font-size: 22rpx; }
+.footer-links navigator { display: inline; color: var(--primary-dark); margin: 0 8rpx; }

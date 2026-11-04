@@ -1,0 +1,35 @@
+<view class="wrap" wx:if="{{quiz}}">
+  <view class="card">
+    <view class="h1">{{quiz.title}}</view>
+    <view class="sub">出题人：{{quiz.name}} · 达标 ≥{{quiz.threshold}} 题可获「{{quiz.reward}}」</view>
+    <view class="hint">用微信右上角「转发」把问卷发给熟人作答。分享链不含口令。</view>
+    <button class="btn btn-primary" open-type="share">转发给好友作答</button>
+    <button class="btn btn-secondary" bindtap="onCopy">复制邀请文案</button>
+    <button class="btn btn-secondary" bindtap="onPreview">自己预览作答</button>
+  </view>
+
+  <view class="card">
+    <view class="h2">结果榜（首次作答计入）</view>
+    <view class="hint" wx:if="{{boardHint}}">{{boardHint}}</view>
+    <view class="lb-row" wx:for="{{board}}" wx:key="at">
+      <text>{{item.nick || '匿名'}}</text>
+      <text class="lb-score">{{item.score}}/10</text>
+    </view>
+    <view class="hint" wx:if="{{!board.length}}">还没有成绩，转发问卷后这里会更新。</view>
+    <button class="btn btn-ghost" bindtap="onRefreshBoard">刷新榜单</button>
+  </view>
+
+  <!-- 匿名信：默认隐藏，降低个人主体审核风险；需启用时改 SHOW_INBOX=true -->
+  <view class="card" wx:if="{{showInbox}}">
+    <view class="h2">仅出题人可见留言</view>
+    <view class="hint">审核风险：偏社交能力，个人主体可能被拒。默认关闭。</view>
+  </view>
+
+  <button class="btn btn-secondary" bindtap="onNew">再出一套</button>
+</view>
+<view class="wrap" wx:else>
+  <view class="card">
+    <view class="hint">还没有已生成的问卷</view>
+    <button class="btn btn-primary" bindtap="onNew">去出题</button>
+  </view>
+</view>

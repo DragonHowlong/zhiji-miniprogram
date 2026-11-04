@@ -1,0 +1,25 @@
+<view class="wrap" wx:if="{{draft}}">
+  <view class="hint">第 {{step+1}} / 10 题 · 点选项标记「我的答案」</view>
+  <view class="progress"><view style="width:{{progress}}%;"></view></view>
+
+  <view class="card">
+    <view class="h2">{{slot.q}}</view>
+    <view
+      class="opt {{slot.answer===index?'selected correct':''}}"
+      wx:for="{{slot.options}}"
+      wx:key="*this"
+      data-i="{{index}}"
+      bindtap="onPickAnswer"
+    >
+      <view class="letter">{{letters[index]}}</view>
+      <view>{{item}}</view>
+      <view wx:if="{{slot.answer===index}}" class="hint" style="margin-left:auto;">我的答案</view>
+    </view>
+    <button class="btn btn-secondary" bindtap="onReroll">换一题</button>
+  </view>
+
+  <view class="row">
+    <button class="btn btn-secondary" style="flex:1;" bindtap="onPrev" disabled="{{step===0}}">上一题</button>
+    <button class="btn btn-primary" style="flex:1;" bindtap="onNext">{{step>=9?'去设置奖励':'下一题'}}</button>
+  </view>
+</view>
